@@ -22,7 +22,7 @@ module.exports = function (sequelize, DataTypes) {
         models.recommendation.belongsToMany(models.tag, {
             through: models.reccomendation_tags
         });
-        models.recommendation.hasOne(models.category);
+        models.recommendation.belongsTo(models.category);
     };
 
     return Recommendation;

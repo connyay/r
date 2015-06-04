@@ -5,7 +5,12 @@ var Models = require('../../sqldb'),
     common = require('../common/controller');
 
 exports.index = function (req, res) {
-    Recommendation.findAll()
+    var q = {
+        include: {
+            model: Models.category
+        }
+    };
+    Recommendation.findAll(q)
         .then(common.responseWithResult(res))
         .catch(common.handleError(req, res));
 };
