@@ -9,7 +9,9 @@ module.exports = function (sequelize, DataTypes) {
         category_id: DataTypes.INTEGER,
         city: DataTypes.STRING,
         state: DataTypes.STRING,
-        score: DataTypes.INTEGER
+        score: DataTypes.INTEGER,
+        start: DataTypes.DATE,
+        end: DataTypes.DATE
     });
 
     Recommendation.associate = function (models) {
