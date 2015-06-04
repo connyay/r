@@ -12,7 +12,6 @@ module.exports = {
             logging: console.log,
             force: true,
             define: {
-                timestamps: false,
                 underscored: true
             }
         }

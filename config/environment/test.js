@@ -9,7 +9,6 @@ module.exports = {
             force: true,
             logging: false,
             define: {
-                timestamps: false,
                 underscored: true
             }
         }
