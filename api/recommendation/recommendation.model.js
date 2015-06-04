@@ -10,6 +10,10 @@ module.exports = function (sequelize, DataTypes) {
         city: DataTypes.STRING,
         state: DataTypes.STRING,
         score: DataTypes.INTEGER,
+        verified: {
+            type: DataTypes.BOOLEAN,
+            defaultValue: false
+        },
         start: DataTypes.DATE,
         end: DataTypes.DATE
     });
