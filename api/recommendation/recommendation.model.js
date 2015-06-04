@@ -6,11 +6,18 @@ module.exports = function (sequelize, DataTypes) {
         description: DataTypes.TEXT,
         url: DataTypes.STRING,
         source: DataTypes.STRING,
-        category: DataTypes.STRING,
+        category_id: DataTypes.INTEGER,
         city: DataTypes.STRING,
         state: DataTypes.STRING,
         score: DataTypes.INTEGER
     });
+
+    Recommendation.associate = function (models) {
+        models.recommendation.belongsToMany(models.tag, {
+            through: models.reccomendation_tags
+        });
+        models.recommendation.hasOne(models.category);
+    };
 
     return Recommendation;
 };
