@@ -7,7 +7,7 @@ var Models = require('../../sqldb'),
 exports.index = function (req, res) {
     var q = {
         include: {
-            model: Models.category
+            model: Models.tag
         }
     };
     Recommendation.findAll(q)
