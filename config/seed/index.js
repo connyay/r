@@ -9,6 +9,7 @@ Q.all([
         require('./recommendation')(sqldb)
 
     ])
+    .spread(require('./relations'))
     .then(dfd.resolve, dfd.reject);
 
 module.exports = dfd.promise;
