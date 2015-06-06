@@ -10,5 +10,11 @@ module.exports = function (models) {
     }, {
         id: 3,
         title: 'Event'
+    }, {
+        id: 4,
+        title: 'Show'
+    }, {
+        id: 5,
+        title: 'Concert'
     }]);
 };

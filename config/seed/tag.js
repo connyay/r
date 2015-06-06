@@ -10,5 +10,8 @@ module.exports = function (models) {
     }, {
         id: 3,
         title: 'food'
+    }, {
+        id: 4,
+        title: 'show'
     }]);
 };
