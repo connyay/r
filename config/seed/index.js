@@ -6,6 +6,7 @@ var dfd = Q.defer();
 
 Q.all([
         require('./tag')(sqldb),
+        require('./type')(sqldb),
         require('./recommendation')(sqldb)
 
     ])

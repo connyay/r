@@ -3,13 +3,13 @@
 module.exports = function (models) {
     return models.recommendation.bulkCreate([{
         id: 1,
-        title: 'Cool foo here',
-        description: 'Foo is really cool becuase bar',
-        url: 'http://twitter.com/foobar',
-        source: 'feed/twitter/fobar',
+        title: 'First Friday',
+        description: 'First Friday is a free self-guided tour of downtown’s cutting edge cultural hot spots.',
+        url: 'http://www.godowntownraleigh.com/first-friday-raleigh',
+        source: 'feed/reddit/TheCrash84',
         city: 'Raleigh',
         state: 'NC',
-        score: 90,
+        type_id: 3,
         verified: false
     }]);
 };

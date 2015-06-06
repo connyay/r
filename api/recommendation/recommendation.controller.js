@@ -6,9 +6,7 @@ var Models = require('../../sqldb'),
 
 exports.index = function (req, res) {
     var q = {
-        include: {
-            model: Models.tag
-        }
+        include: [Models.tag, Models.type]
     };
     Recommendation.findAll(q)
         .then(common.responseWithResult(res))

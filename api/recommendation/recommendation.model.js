@@ -8,6 +8,7 @@ module.exports = function (sequelize, DataTypes) {
         source: DataTypes.STRING,
         city: DataTypes.STRING,
         state: DataTypes.STRING,
+        type_id: DataTypes.INTEGER,
         verified: {
             type: DataTypes.BOOLEAN,
             defaultValue: false
@@ -20,6 +21,7 @@ module.exports = function (sequelize, DataTypes) {
         models.recommendation.belongsToMany(models.tag, {
             through: models.recommendation_tags
         });
+        models.recommendation.belongsTo(models.type);
     };
 
     return Recommendation;

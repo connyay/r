@@ -3,7 +3,7 @@
 var Sequelize = require('sequelize'),
     path = require('path'),
     config = require('../config/environment'),
-    models = ['recommendation', 'recommendation_tags', 'tag'];
+    models = ['recommendation', 'recommendation_tags', 'tag', 'type'];
 
 var db = {
     Sequelize: Sequelize,

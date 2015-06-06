@@ -1,11 +1,11 @@
 'use strict';
 var Q = require('q');
 
-module.exports = function (tag, recommendation) {
+module.exports = function (tags, types, recommendations) {
     var dfd = Q.defer();
     var dfdList = [];
-    recommendation.forEach(function (r) {
-        dfdList.push(r.addTag(tag[0], {
+    recommendations.forEach(function (r) {
+        dfdList.push(r.addTag(tags[0], {
             score: 90
         }));
     });
