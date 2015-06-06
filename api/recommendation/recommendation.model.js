@@ -8,7 +8,6 @@ module.exports = function (sequelize, DataTypes) {
         source: DataTypes.STRING,
         city: DataTypes.STRING,
         state: DataTypes.STRING,
-        score: DataTypes.INTEGER,
         verified: {
             type: DataTypes.BOOLEAN,
             defaultValue: false

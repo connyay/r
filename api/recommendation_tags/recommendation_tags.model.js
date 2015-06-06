@@ -3,7 +3,8 @@
 module.exports = function (sequelize, DataTypes) {
     var RecommendationTags = sequelize.define('recommendation_tags', {
         recommendation_id: DataTypes.INTEGER,
-        tag_id: DataTypes.INTEGER
+        tag_id: DataTypes.INTEGER,
+        score: DataTypes.INTEGER
     });
 
     return RecommendationTags;
