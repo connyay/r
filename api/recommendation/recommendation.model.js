@@ -19,7 +19,7 @@ module.exports = function (sequelize, DataTypes) {
 
     Recommendation.associate = function (models) {
         models.recommendation.belongsToMany(models.tag, {
-            through: models.reccomendation_tags
+            through: models.recommendation_tags
         });
     };
 
