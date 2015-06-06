@@ -6,7 +6,6 @@ module.exports = function (sequelize, DataTypes) {
         description: DataTypes.TEXT,
         url: DataTypes.STRING,
         source: DataTypes.STRING,
-        category_id: DataTypes.INTEGER,
         city: DataTypes.STRING,
         state: DataTypes.STRING,
         score: DataTypes.INTEGER,
