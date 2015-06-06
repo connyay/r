@@ -5,7 +5,7 @@ var sqldb = require('../../sqldb');
 var dfd = Q.defer();
 
 Q.all([
-        require('./category')(sqldb),
+        require('./tag')(sqldb),
         require('./recommendation')(sqldb)
 
     ])
