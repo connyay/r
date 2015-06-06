@@ -9,6 +9,20 @@ exports.index = function (req, res) {
         include: [Models.tag, Models.type]
     };
     Recommendation.findAll(q)
-        .then(common.responseWithResult(res))
+        .then(function (recommendations) {
+            recommendations = recommendations.map(function (r) {
+                r = r.get({
+                    plain: true
+                });
+                r.tags.map(function (t) {
+                    t.score = t.recommendation_tags.score;
+                    delete t.recommendation_tags;
+                    return t;
+                });
+                return r;
+            });
+
+            res.json(recommendations);
+        })
         .catch(common.handleError(req, res));
 };
